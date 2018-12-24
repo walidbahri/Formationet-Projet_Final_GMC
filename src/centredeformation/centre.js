@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Card from './cardcenter' ;
+import styled from "styled-components" ;
+
 
 const info = [{
     centre_logo:"",
@@ -26,21 +28,22 @@ const info = [{
 }
 ]
 
-   
+const Wrapper = styled.div`
+.centre-container{
+    display: flex ;
+    flex-direction: column ;
 
-
+}
+`
 class Cardcentre extends React.Component {
     render(){
        
     return (
-        <div>
-            <h2>CENTRE DE FORMATION</h2>
-        <div className="centre-container">
+        <Wrapper>
+        <div className="container centre-container">
             {info.map( el => <Card center={el}/>)}
-
-
            </div>
-           </div>
+        </Wrapper>
         
     )
 }}

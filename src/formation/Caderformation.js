@@ -22,9 +22,6 @@ const Wrapper = styled.div`
     display: flex ;
     align-items: center ;
 }
-
-
-
 `
         
 const CardFormation= ({card})=>{
@@ -33,7 +30,7 @@ const CardFormation= ({card})=>{
             
             <div className="formation-item">
                 <div className="formation-item-header">
-                <p>PHOTO</p>
+                <h1>IMAGE</h1>
                     <img src="images/logo/20170525033544_2ec25344ad50b41db8060e3d4f9e3840.png"  alt=""/>
                     
                 </div>
