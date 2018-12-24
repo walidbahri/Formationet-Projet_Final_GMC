@@ -6,15 +6,11 @@ import styled from "styled-components" ;
 const Wrapper = styled.div`
 
 .region-container{
-    display: flex;
-    justify-content:space-between;
-  flex-wrap: wrap;
-  margin: 20px;
+   display: flex;
+   justify-content:space-between;
+   flex-wrap: wrap;
 }
-
 `
-
-
 
 const info_region = [{
     centre_logo: "",
@@ -70,7 +66,7 @@ class Region extends React.Component {
         return (
                   <Wrapper>
            
-                <div className="region-container">
+                <div className="container region-container">
                     {info_region.map(el => <Card region={el} />)}
 
                </div>

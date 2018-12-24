@@ -26,6 +26,7 @@ a{
     position: fixed ;
     top: 0 ;
     background-color: rgba(0 ,0 ,0 ,0.7) ;
+    z-index: 100 ;
 }
 .user-action-buttons{
     display: flex ;
@@ -66,7 +67,8 @@ a{
     text-shadow: 3px 3px 3px rgba(0 ,0 ,0 ,0.5) ;
 }
 .homelink{
-    margin: 0px 20px
+    margin: 0px 20px ;
+    padding: 10px ;
 }
 
 .homelink:hover{
@@ -86,9 +88,9 @@ return (
 <Wrapper>
 <div className="menubar">
 <div className="homeLinks">
-<Link className="homelink colored" to="/">Home</Link>
+<Link className="homelink" to="/">Home</Link>
 <Link className="homelink" to="/Formation"> Formations </Link>
-<Link className="homelink colored" to="/Centredeformation"> Centres de formation </Link>
+<Link className="homelink" to="/Centredeformation"> Centres de formation </Link>
 <Link className="homelink" to="/Formateur"> Formateur </Link>
 </div>
 <div className="user-action-buttons">
