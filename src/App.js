@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Formation from './formation/formation';
+import FormationDetail from './formation/formation';
 import Formateur from './formateur/formateur';
 
 import Cardcentre from './centredeformation/centre';
@@ -45,7 +45,7 @@ class App extends Component {
 
         <Menu className="menu"/>
         <Route exact path="/" component={Home}/>
-        <Route path="/formation" component={Formation}/>
+        <Route path="/formation" component={FormationDetail}/>
         <Route path="/Centredeformation" component={Cardcentre}/>
         <Route path="/formateur" component={Formateur}/>
         <Route path="/Inscription/InscriptionNormal" component={InscriptionNormal}/>   

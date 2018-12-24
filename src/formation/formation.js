@@ -1,15 +1,43 @@
 import React, { Component } from 'react';
 
+import CardFormation from './Caderformation';
 
-class Formation extends Component{
+const info_formation = [{
+    centre_logo: "",
+    title: "Full stack javascript",
 
+},
+{
+    centre_logo: "",
+    title: "PHP",
 
-    render(){
-        return (
-            <h1>FORMATION</h1>
-)}
-
+},
+{
+    centre_logo: "",
+    title: "Bizerte",
+},
+{
+    centre_logo: "",
+    title: "gomycode",
 
 }
+]
 
-export default Formation;
+
+class FormationDetail extends React.Component {
+    render() {
+        return (
+            <div>
+                <h2>Liste des FORMATION</h2>
+                <div className="formation-container">
+                    {info_formation.map(el => <CardFormation card={el} />)}
+
+
+                </div>
+            </div>
+
+        )
+    }
+}
+
+export default FormationDetail;
