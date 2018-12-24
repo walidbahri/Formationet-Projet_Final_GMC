@@ -84,7 +84,7 @@ class Search extends React.Component {
 
              <div className="seach-by">
              <div className="search-type domaine">
-               <a className="search-type-link" href="#">
+               <a className="search-type-link" href="/Domaine">
 
                <div className="search-image domaine-image" style={{ backgroundImage: "url(" + big + ")"}}>
                <h3 className="search-type-text">DOMAINE</h3>
@@ -93,7 +93,7 @@ class Search extends React.Component {
              </div>
 
              <div className="search-type region">
-               <a className="search-type-link" href="#">
+               <a className="search-type-link" href="/Region">
 
                <div className="search-image region-image" style={{ backgroundImage: "url(" + pic + ")"}}>
                <h3 className="search-type-text">REGION</h3>

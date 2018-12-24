@@ -17,11 +17,26 @@ const info_region = [{
 },
 {
     centre_logo: "",
-    title: "gomycode",
+    title: "Béja",
 
 }, {
     centre_logo: "",
-    title: "gomycode",
+    title: "Mannouba",
+
+},
+{
+    centre_logo: "",
+    title: "Ben Arous",
+
+},
+{
+    centre_logo: "",
+    title: "Sousse",
+
+},
+{
+    centre_logo: "",
+    title: "Sfax",
 
 }
 ]
@@ -33,9 +48,9 @@ class Region extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="">
                 <h2>Liste des regions</h2>
-                <div className="centre-container">
+                <div className="centre-container col-md-8">
                     {info_region.map(el => <Card region={el} />)}
 
 

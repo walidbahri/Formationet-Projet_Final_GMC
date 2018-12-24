@@ -1,10 +1,25 @@
 import React from 'react';
+import styled from "styled-components" ;
+const Wrapper = styled.div`
+.centre-item{
+  border: 2px solid black;
+  margin-bottom: 20px;
+  margin-left:10px;
+  
+}
+.centre-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
 
-        
+`
+
+
 const Cardregion= ({region})=>{
     return (
-        <div className="col-md-4">
-            <div className="centre-item">
+        <Wrapper>
+            <div className="centre-item ">
                 <div className="centre-item-header">
                     <img src="images/logo/20170525033544_2ec25344ad50b41db8060e3d4f9e3840.png"  alt=""/>
                     <div className="centre-item-header-info">
@@ -19,7 +34,7 @@ const Cardregion= ({region})=>{
                     </div>
                 </div>
             </div>
-        </div>
+            </Wrapper>
         
     )
 }

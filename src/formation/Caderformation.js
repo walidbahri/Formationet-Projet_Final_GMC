@@ -5,6 +5,7 @@ const Wrapper = styled.div`
 .formation-item{
     border: 3px solid black;
     margin-bottom: 10px;
+    
   }
   .formation-item{
       display:flex;
