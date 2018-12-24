@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
-
 import CardFormation from './Caderformation';
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+    *{
+        box-sizing:border-box ;
+} 
+
+.container{
+    background-color: #fff ;
+}
+
+`
 
 const info_formation = [{
     centre_logo: "",
@@ -27,14 +38,11 @@ const info_formation = [{
 class FormationDetail extends React.Component {
     render() {
         return (
-            <div>
-                <h2>Liste des FORMATION</h2>
-                <div className="formation-container">
-                    {info_formation.map(el => <CardFormation card={el} />)}
-
-
-                </div>
-            </div>
+            <Wrapper>
+                    <div className="container formations-container">
+                        {info_formation.map(el => <CardFormation card={el} />)}
+                    </div>
+            </Wrapper>
 
         )
     }

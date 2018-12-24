@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components" ;
-import container from "reactstrap"
+
 const Wrapper = styled.div`
 .search-text{
   margin: 60px 50px ;

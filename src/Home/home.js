@@ -16,8 +16,6 @@ const Wrapper = styled.div`
     color: #fff ;
     width: 100% ;
     height: 600px ;
-    margin: 0px ;
-    padding: 0px ;
     display: flex ;
     justify-content: center ;
     align-items: center ;
@@ -48,7 +46,7 @@ class Home extends Component{
         <div>
             <Jumbotron fluid className="home-image">
             <div className="intro-text">
-            <h1>Lorem ipsum dolor</h1>
+            <h1>Formation-NET</h1>
             </div>
             </Jumbotron>
         <div className="container">

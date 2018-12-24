@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import FormationDetail from './formation/formation';
 import Formateur from './formateur/formateur';
-
 import Cardcentre from './centredeformation/centre';
 import Menu from './navbarmenu';
 import Home from './Home/home';
@@ -20,19 +19,18 @@ const Wrapper = styled.div`
 *{
   box-sizing: border-box ;
 }
+
 .App{
   padding-bottom: 100px ;
   background-color: whitesmoke ;
-}
-.menu{
-  padding: 0 ;
-  margin: 0 ;
-  z-index: 100 ;
+  border: solid transparent 0.1px ;
 }
 .container{
   padding: 50px;
   margin-top: 100px ;
+  background-color: #fff ;
 }
+
 `
 
 
@@ -42,7 +40,6 @@ class App extends Component {
       <BrowserRouter>
       <Wrapper>
       <div className="App">
-
         <Menu className="menu"/>
         <Route exact path="/" component={Home}/>
         <Route path="/formation" component={FormationDetail}/>

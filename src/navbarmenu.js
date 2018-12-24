@@ -24,6 +24,7 @@ a{
     justify-content: space-between ;
     align-items: center ;
     position: fixed ;
+    top: 0 ;
     background-color: rgba(0 ,0 ,0 ,0.7) ;
 }
 .user-action-buttons{
