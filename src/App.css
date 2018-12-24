@@ -52,6 +52,7 @@
   background-color: gray;
   height: 50px;
   width: 80px;
+  
 }
 .centre-item{
   border: 2px solid black;
@@ -62,3 +63,4 @@
   flex-wrap: wrap;
   margin: 20px;
 }
+
