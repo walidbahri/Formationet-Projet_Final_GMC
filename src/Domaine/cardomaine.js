@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   background-size: cover ;
   background-repeat: no-repeat ;
   background-position: center ;
+  text-align: center ;
 }
 a{
     color: #fff ;
