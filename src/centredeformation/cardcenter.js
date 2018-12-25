@@ -19,8 +19,6 @@ const Cardcentre = ({center})=>{
                     <img src="images/logo/20170525033544_2ec25344ad50b41db8060e3d4f9e3840.png"  alt=""/>
                     <div className="centre-item-header-info">
                     <h1>IMAGE</h1>
-                        
-                        
                     </div>
                 </div>
                 <div className="centre-item-content">

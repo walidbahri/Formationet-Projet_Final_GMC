@@ -12,7 +12,6 @@ import Region from './Region/region';
 import Domaine from './Domaine/domaine'
 import styled from "styled-components" ;
 
-
 import './App.css';
 
 const Wrapper = styled.div`

@@ -6,8 +6,17 @@ import { Link } from 'react-router-dom'
 
 
 const Wrapper = styled.div`
-Link{
-  color: white ;
+a{
+  color: #fff ;
+  text-decoration: none ;
+}
+.modal-content{
+  align-items: center ;
+}
+.inscription-option{
+ margin-bottom: 20px ;
+ padding: 20px ;
+ width: 200px ;
 }
 
 `
@@ -22,20 +31,20 @@ class ModalExampleDimmer extends Component {
     const { open, dimmer } = this.state
 
     return (
-      <Wrapper>
+      
       <div>
         <a onClick={this.show('blurring')}>Inscription</a>
         
         <Modal className="container" size="small" dimmer={dimmer} open={open} onClose={this.close}>
           <Modal.Header>Inscrivez vous en tant que :</Modal.Header>
-          
-          <Modal.Content image scrolling>
+          <Wrapper>
+          <Modal.Content className="modal-content" image scrolling>
           <div className="inscription-option">
             <Image wrapped size='small' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' rounded />
             <Modal.Description>
-              <Header>Etudiant</Header>
+              <Header></Header>
               <Button color='black' onClick={this.close}>
-              <Link className="inscription-link" to="/Inscription/InscriptionNormal">Selectionner</Link>
+              <Link className="inscription-link" to="/Inscription/InscriptionNormal">Etudiant</Link>
             </Button>
             </Modal.Description>    
             </div>      
@@ -43,9 +52,9 @@ class ModalExampleDimmer extends Component {
             <div className="inscription-option">
             <Image wrapped size='small' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' rounded />
             <Modal.Description>
-              <Header>Formateur</Header>
+              <Header></Header>
               <Button color='black' onClick={this.close}>
-              <Link to="/Inscription/InscriptionFormateur">Selectionner</Link>
+              <Link to="/Inscription/InscriptionFormateur">Formateur</Link>
             </Button>
             </Modal.Description>
             </div>
@@ -53,15 +62,14 @@ class ModalExampleDimmer extends Component {
             <div className="inscription-option">
             <Image wrapped size='small' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' rounded />
             <Modal.Description>
-              <Header>Centre de formation </Header>
+              <Header> </Header>
               <Button color='black' onClick={this.close}>
-              <Link to="/Inscription/InscriptionCentre">Selectionner</Link>
+              <Link to="/Inscription/InscriptionCentre">Centre de formation</Link>
             </Button>
             </Modal.Description>
             </div>
-
           </Modal.Content>
-
+          </Wrapper>
           <Modal.Actions>
             <Button color='black' onClick={this.close}>
               Annuler
@@ -70,7 +78,7 @@ class ModalExampleDimmer extends Component {
         </Modal>
         
       </div>
-      </Wrapper>
+      
     )
   }
 }
