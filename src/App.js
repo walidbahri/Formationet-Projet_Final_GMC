@@ -10,7 +10,9 @@ import InscriptionFormateur from './Inscription/InscriptionFormateur';
 import InscriptionCentre from './Inscription/InscriptionCentre';
 import Region from './Region/region';
 import Domaine from './Domaine/domaine'
+import LogIn from "./Inscription/LogIn"
 import styled from "styled-components" ;
+
 
 import './App.css';
 
@@ -47,6 +49,7 @@ class App extends Component {
         <Route path="/Inscription/InscriptionNormal" component={InscriptionNormal}/>   
         <Route path="/Inscription/InscriptionFormateur" component={InscriptionFormateur}/>  
         <Route path="/Inscription/InscriptionCentre" component={InscriptionCentre}/>
+        <Route path="/LogIn" component={LogIn} />
         <Route path="/Region"  component={Region}/>
         <Route path="/Domaine" component={Domaine}/>
       </div>

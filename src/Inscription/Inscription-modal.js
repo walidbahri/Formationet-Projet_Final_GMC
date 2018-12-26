@@ -20,6 +20,10 @@ a{
 }
 
 `
+const buttonStyle = {
+  padding: "13px" ,
+  textAlign:"center" ,
+}
 
 class ModalExampleDimmer extends Component {
   state = { open: false }
@@ -33,7 +37,7 @@ class ModalExampleDimmer extends Component {
     return (
       
       <div>
-        <a onClick={this.show('blurring')}>Inscription</a>
+        <a style={buttonStyle} onClick={this.show('blurring')}>Inscription</a>
         
         <Modal className="container" size="small" dimmer={dimmer} open={open} onClose={this.close}>
           <Modal.Header>Inscrivez vous en tant que :</Modal.Header>

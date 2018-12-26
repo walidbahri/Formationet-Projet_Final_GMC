@@ -52,6 +52,8 @@ background-color: rgba(232,232,232,0.3);
          padding:10px; 
          font-weight: bold ;
          font-size: 15px ;
+         cursor: pointer ;
+
  }
  #submit{
         background-color: green;
