@@ -9,6 +9,15 @@ const Wrapper = styled.div`
     align-items: center ;
     margin-bottom: 10px ;
 }
+.centre-item-content{
+    max-width:200px;
+}
+
+.centre-item-header-info img {
+    max-width:200px;
+
+}
+
 `
         
 const Cardcentre = ({center})=>{
@@ -17,12 +26,12 @@ const Cardcentre = ({center})=>{
             <div className="col-md-12 centre-item">
                 <div className="centre-item-header">
                     <div className="centre-item-header-info">
-                    <h1>IMAGE</h1>
+                    <img src={center.centre_logo} />
                     </div>
                 </div>
                 <div className="centre-item-content">
                     <div className="centre-item-body">
-                    <h5 class="centre-item-title">{center.title}</h5>
+                    <h3 class="centre-item-title">{center.title}</h3>
                         <p>{center.description}</p>
                     </div>
                     <div className="centre-item-footer">

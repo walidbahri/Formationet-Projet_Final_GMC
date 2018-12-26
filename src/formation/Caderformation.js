@@ -30,8 +30,8 @@ const CardFormation= ({card})=>{
             
             <div className="formation-item">
                 <div className="formation-item-header">
-                <h1>IMAGE</h1>
-                    <img src="images/logo/20170525033544_2ec25344ad50b41db8060e3d4f9e3840.png"  alt=""/>
+
+                    <img src={card.centre_logo}  alt=""/>
                     
                 </div>
                 <div  className="formation-item-content">
