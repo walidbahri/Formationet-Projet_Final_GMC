@@ -61,6 +61,7 @@ const Wrapper = styled.div`
          padding:10px; 
          font-weight: bold ;
          font-size: 15px ;
+         cursor: pointer ;
  }
  #submit{
     background-color: green;

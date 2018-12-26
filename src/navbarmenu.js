@@ -33,9 +33,10 @@ a{
 }
 .inscription{
     margin: 0px 10px ;
-    padding: 8px ;
     border: solid white 1px ;
     border-radius: 8px ;
+    display: flex ;
+    align-items: center ;
 }
 .inscription:hover{
     background-color: rgba(255 ,255 ,255 ,0.8) ;
@@ -94,8 +95,8 @@ return (
 <Link className="homelink" to="/Formateur"> Formateur </Link>
 </div>
 <div className="user-action-buttons">
-<a href="#" className="inscription"><ModalExampleDimmer /></a>
-<a href="#" className="connection action-button"> Connexion </a>
+<Link className="inscription" to="#"><ModalExampleDimmer /></Link>
+<Link className="connection" to="/LogIn">Connexion</Link>
 </div>
 </div>    
 </Wrapper>
