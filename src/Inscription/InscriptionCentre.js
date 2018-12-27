@@ -1,7 +1,8 @@
-import React from "react" ;
-import styled from "styled-components" ;
+import React from "react";
+import styled from "styled-components";
+import axios from "axios"
 
-const Wrapper = styled.div`
+const Wrapper = styled.div `
 *{
         box-sizing:border-box ;
 }
@@ -103,9 +104,43 @@ const Wrapper = styled.div`
 class InscriptionCentre extends React.Component {
         constructor(props) {
                 super(props);
+                this.state = {
+
+                        nom: "",
+                        nomResponable: "",
+                        Site: "",
+                        Adresse: "",
+                        email: "",
+                        password: "",
+                        tel: "",
+                        Site: "",
+
+                };
+
+                this.onChange = this.onChange.bind(this);
+                this.handleSubmit = this.handleSubmit.bind(this);
+
+        }
+
+        handleSubmit = event => {
+
+                event.preventDefault();
+                axios.post("http://localhost:3000/centres", this.state)
+                        .then(res => {
+
+                        })
+        }
+
+        onChange(e) {
+                this.setState({
+                        [e.target.name]: e.target.value
+                })
+
+
         }
 
         render() {
+<<<<<<< HEAD
             return(
                     <Wrapper>
                 <div className="container">
@@ -153,7 +188,55 @@ class InscriptionCentre extends React.Component {
                 </div>
                 </Wrapper>
             )
+=======
+                return ( 
+                <Wrapper >
+                        <div className = "container" > { /* Log IN FORM */ } 
+                        <form onSubmit = {this.handleSubmit} > 
+                        { /* First Name input */ } 
+                        <label htmlFor = "Nom-du-centre" > Nom du centre: </label> 
+                        <input id = "Nom-du-centre" name = "nom" type = "text" value = {this.state.nom}onChange = {this.onChange} > </input>
+
+                        { /* Last Name input */ } 
+                        <label htmlFor = "Nom-du-responsable" > Nom du responsable: </label> 
+                        <input id = "Nom-du-responsable"type = "text"name = "nomResponable"onChange = {this.onChange} > </input>
+
+                        { /* Description du centre input */ }
+
+                        <label htmlFor = "Description-du-centre" > Description du centre: </label> 
+                        <input name = "description"onChange = {this.onChange} > </input>
+
+                        { /* Email input */ } 
+                        <label htmlFor = "Adresse" > Adresse: </label> 
+                        <input id = "Adresse"type = "text"name = "Adresse"onChange = {this.onChange} > </input>
+
+                        { /* Email input */ } 
+                        <label htmlFor = "Adresse-email" > Adresse email: </label> 
+                        <input id = "Adresse-email"type = "text"name = "email"onChange = { this.onChange} > </input>
+
+                        { /* PassWord input */ }
+                         <label htmlFor = "Mot-de-passe" > Mot de passe: </label> 
+                         <input id = "Mot-de-passe" type = "password"name = "password"onChange = {this.onChange} > </input> 
+
+                        { /* phone number input */ } 
+                        <label htmlFor = "Numero-de-téléphone" > Numero de téléphone: </label> 
+                        <input id = "Numero-de-téléphone"type = "tel"name = "tel"onChange = {this.onChange} > </input>
+
+                        { /* Email input */ } 
+                        <label htmlFor = "Site-web" > Site web: </label> 
+                        <input id = "Site-web" type = "text" name = "Site" onChange = {this.onChange} > </input>
+
+                        { /* Submit Button */ } 
+                        <div className = "Log-in-buttons" >
+                        <input className = "Log-in-button" id = "submit" type = "submit" value = "Sign In"> </input>
+                        <input className = "Log-in-button"id = "cancel" type = "button" value = "Cancel"> </input>
+                        </div> 
+                        </form> 
+                        </div> 
+                        </Wrapper>
+                )
+>>>>>>> 250be8c1468f2f3ea1abcacf1a1aa0b828cf3f58
         }
 }
 
-export default InscriptionCentre ;
+export default InscriptionCentre;

@@ -1,6 +1,7 @@
 import React from "react" ;
 import styled from "styled-components" ;
 
+
 const Wrapper = styled.div`
 *{
         box-sizing:border-box ;
@@ -99,9 +100,8 @@ const Wrapper = styled.div`
 `
 
 class InscriptionNormal extends React.Component {
-        constructor(props) {
-                super(props);
-        }
+      
+ 
 
         render() {
             return(
