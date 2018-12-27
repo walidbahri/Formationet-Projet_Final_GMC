@@ -113,6 +113,7 @@ class InscriptionFormateur extends React.Component {
                 <div className="container">
                             {/* Log IN FORM */}
                 <form>
+                        <h2>Inscription formateur</h2>
                             {/* First Name input */}
                     <label htmlFor="Nom"> Nom formateur : </label>
                     <input id="Nom" type="text"></input>

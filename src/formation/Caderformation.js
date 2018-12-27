@@ -22,6 +22,11 @@ const Wrapper = styled.div`
     display: flex ;
     align-items: center ;
 }
+.formation-item-header img {
+    max-width:150px;
+
+}
+
 `
         
 const CardFormation= ({card})=>{

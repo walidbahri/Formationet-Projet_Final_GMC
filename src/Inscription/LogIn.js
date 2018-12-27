@@ -95,6 +95,7 @@ class LogIn extends React.Component {
             <Wrapper>
             <div className="container">
             <form>
+                    
                             {/* Email input */}
                     <label htmlFor="email"> Email adress : </label>
                     <input id="email" type="text"></input>

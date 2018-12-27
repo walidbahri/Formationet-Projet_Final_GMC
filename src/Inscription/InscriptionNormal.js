@@ -109,6 +109,7 @@ class InscriptionNormal extends React.Component {
                 <div className="container">
                             {/* Log IN FORM */}
                 <form>
+                        <h2>Inscription utilisateur</h2>
                             {/* First Name input */}
                     <label htmlFor="Nom"> Nom : </label>
                     <input id="Nom" type="text"></input>

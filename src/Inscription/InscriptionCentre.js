@@ -111,6 +111,7 @@ class InscriptionCentre extends React.Component {
                 <div className="container">
                             {/* Log IN FORM */}
                 <form>
+                        <h2>Inscrire votre centre de formation</h2>
                             {/* First Name input */}
                     <label htmlFor="Nom-du-centre"> Nom du centre : </label>
                     <input id="Nom-du-centre" type="text"></input>
