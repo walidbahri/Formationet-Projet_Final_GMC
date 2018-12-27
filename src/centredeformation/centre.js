@@ -1,32 +1,10 @@
 import React, { Component } from 'react';
 import Card from './cardcenter' ;
 import styled from "styled-components" ;
+import axios from 'axios'
 
 
-const info = [{
-    centre_logo:"data:image/png;base64,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",
-    title:"GO MY CODE",
-    description:"GoMyCode est une école de coding créé en Tunisie en 2016"
-},
-{
-    centre_logo:"http://www.tunisie-formation.com/images/logo/20171004032434_2ea5a88d84deffde703da9c9da26a74e.jpg",
-    title:"ALPHA Langues",
-    description:"ALPHA Langues est un centre de formation continue spécialisé dans l’enseignement des langues vivantes et la traduction"
-},
-{
-    centre_logo:"http://www.tunisie-formation.com/images/logo/20170924113141_14bb4348e3a0a74772af3c7dccc82cb3.png",
-    title:"MAGMA FORMATION",
-    description:"Centre de formation privé en tunisie"
-},{
-    centre_logo:"http://www.tunisie-formation.com/images/logo/20150629022012_63ec893c71c8615b07141ef03ee242c3.png",
-    title:"FormaPro",
-    description:" FORMAPRO  offre des Formations accélérées et continues de haut niveau dans le domaine de la Technologie de l’information et de la communication,"
-},{
-    centre_logo:"http://www.tunisie-formation.com/images/logo/20150923112255_3ee53fa7694a66218f4a18d09cac8636.jpg",
-    title:"Progres Formation",
-    description:"Progres Formation : Centre de Formation Continue reconnu par l'etat propose des formations conçues et assurées par des professionnels de l'entreprise et des formateurs spécialisés dans le domaine des technologies du l'informatique"
-}
-]
+
 
 const Wrapper = styled.div`
 .centre-container{
@@ -36,12 +14,33 @@ const Wrapper = styled.div`
 }
 `
 class Cardcentre extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            centres: [],
+         
+        };
+    }
+
+    componentDidMount() {
+        axios.get("http://localhost:3000/centres")
+            .then(res => {
+                // console.log(res.data.url);
+                // console.log(res.data.explanation);
+                this.setState({
+                    centres: res.data
+                })
+            })
+
+    }
+
+  
     render(){
        
     return (
         <Wrapper>
         <div className="container centre-container">
-            {info.map( el => <Card center={el}/>)}
+            {this.state.centres.map( el => <Card center={el}/>)}
            </div>
         </Wrapper>
         

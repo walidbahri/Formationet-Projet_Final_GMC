@@ -26,12 +26,12 @@ const Cardcentre = ({center})=>{
             <div className="col-md-12 centre-item">
                 <div className="centre-item-header">
                     <div className="centre-item-header-info">
-                    <img src={center.centre_logo} />
+                    <img src="https://animalbook.tv/images/2016/08/Default-Author.jpg" width="100px" height="100px"/>
                     </div>
                 </div>
                 <div className="centre-item-content">
                     <div className="centre-item-body">
-                    <h3 class="centre-item-title">{center.title}</h3>
+                    <h3 class="centre-item-title">{center.nom}</h3>
                         <p>{center.description}</p>
                     </div>
                     <div className="centre-item-footer">
