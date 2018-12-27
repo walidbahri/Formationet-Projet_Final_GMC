@@ -56,7 +56,7 @@ MongoClient.connect(mongo_url, (err, client) => {
     app.post('/centres', (req, res) => {
         let newCentre = req.body;
         db.collection('centres').insertOne(newCentre, (err, data) => {
-            if (err) res.send('');
+            if (err) res.send('error');
             else res.send(data)
 
         })

@@ -1,6 +1,5 @@
 import React from "react" ;
 import styled from "styled-components" ;
-import {Container, Button, Header, Image, Modal } from 'semantic-ui-react'
 
 
 const Wrapper = styled.div`
