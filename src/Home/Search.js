@@ -78,7 +78,8 @@ class Search extends React.Component {
         <div className="container">
              <div className="search-text">
              <p>
-               Lorem ipsum dolor sit amet, laudem verear vocibus ut vim. Ne vero dolore eloquentiam pro, te eam ullum nulla, quo ei iisque consulatu. Zril corrumpit ex vel, in usu movet commune cotidieque. Mandamus repudiandae consequuntur ea nam, ea mel iudico eligendi comprehensam. Nostrum placerat expetenda at vim, verear deleniti vel et, vis et sonet similique eloquentiam.
+               <h2>La platfrome des centres de formation</h2>
+               C'est un outil de recherche riche, simple et efficace mis à la disposition des entreprises, des salariés et des étudiants à la recherche de formations et de perfectionnement.
               </p>
              </div>
 

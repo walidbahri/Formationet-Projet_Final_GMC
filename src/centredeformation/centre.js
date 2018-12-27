@@ -25,12 +25,17 @@ class Cardcentre extends React.Component {
     componentDidMount() {
         axios.get("http://localhost:3000/centres")
             .then(res => {
-                // console.log(res.data.url);
-                // console.log(res.data.explanation);
                 this.setState({
                     centres: res.data
                 })
             })
+
+    }
+
+    deleteCentre  = (id) =>   {
+        axios.delete(`http://localhost:3000/centres/${id}`)
+        .then(res => console.log(res.data))
+        window.location.reload();
 
     }
 
@@ -40,7 +45,7 @@ class Cardcentre extends React.Component {
     return (
         <Wrapper>
         <div className="container centre-container">
-            {this.state.centres.map( el => <Card center={el}/>)}
+            {this.state.centres.map( el => <Card center={el} delete={this.deleteCentre}/>)}
            </div>
         </Wrapper>
         

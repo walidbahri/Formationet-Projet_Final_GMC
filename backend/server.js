@@ -35,10 +35,23 @@ MongoClient.connect(mongo_url, (err, client) => {
         var nameTo = req.params.name;
         db.collection('contacts').findOneAndDelete({ name: nameTo }, (err, results) =>{
             if (err) res.send('erreur')
-            else res.send("ok")
+            else results.send("ok")
         });
       
       });
+
+// Delete Centre
+      app.delete('/centres/:cName', (req, res) => {
+        let cName = req.params.cName;
+        db.collection('centres').findOneAndDelete({ "_id" : ObjectID(cName) }, (err, data) => {
+            if (err) res.send('error');
+            else res.send(data)
+
+        })
+
+    })
+
+
 
  
 

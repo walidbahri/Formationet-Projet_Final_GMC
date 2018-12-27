@@ -20,10 +20,11 @@ const Wrapper = styled.div`
 
 `
         
-const Cardcentre = ({center})=>{
+const Cardcentre = (props)=>{
     return (
         <Wrapper>
             <div className="col-md-12 centre-item">
+            <span onClick={() => props.delete(props.center._id)} >X</span>
                 <div className="centre-item-header">
                     <div className="centre-item-header-info">
                     <img src="https://animalbook.tv/images/2016/08/Default-Author.jpg" width="100px" height="100px"/>
@@ -31,8 +32,8 @@ const Cardcentre = ({center})=>{
                 </div>
                 <div className="centre-item-content">
                     <div className="centre-item-body">
-                    <h3 class="centre-item-title">{center.nom}</h3>
-                        <p>{center.description}</p>
+                    <h3 class="centre-item-title">{props.center.nom}</h3>
+                        <p>{props.center.description}</p>
                     </div>
                     <div className="centre-item-footer">
                         <a href="/#">Voir détails ></a>
